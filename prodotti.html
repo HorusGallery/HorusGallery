@@ -37,8 +37,35 @@
     <a href="pantaloni.html" class="btn-sottosezione">Pantaloni</a>
   </div>
   
+  <div class="prodotto fade-in">
+    <!-- Contenuto del prodotto -->
+  </div>
+
+  <div class="prodotto fade-in-scroll">
+    <!-- Contenuto del prodotto -->
+  </div>
+  
   <footer>
     <p>&copy; 2025 Horus Gallery • Tutti i diritti riservati</p>
   </footer>   
+  <script>
+    // Crea un observer per monitorare quando gli elementi entrano nella viewport
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Se l'elemento entra nella visuale, aggiunge la classe "visible"
+          entry.target.classList.add('visible');
+          // Rimuove l'osservazione per evitare ripetizioni
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+  
+    // Applica l'observer a tutti gli elementi con classe "fade-in-scroll"
+    document.querySelectorAll('.fade-in-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+  
 </body>
 </html>

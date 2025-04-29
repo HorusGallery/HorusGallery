@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Anelli - Horus Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="imaggini-logo/LOGO1.jpg">
+  <!-- GLightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+</head>
+<body>
+    <header>
+        <img src="imaggini-logo/banner1.png"  style="width:100%;">
+        <p> </p>
+        <h1>Prodotti</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="prodotti.html">Prodotti</a>
+            <a href="contatti.html">Contatti</a>
+          </nav>
+      </header>
+      <main>
+          <h2>ANELLI</h2>
+      </main>
+
+  <!-- esempio aggiunta di 1 prodotto -->
+ <!-- <div class="griglia-prodotti">
+    <div class="prodotto">
+        <h3>Pircing</h3>
+        <div class="galleria">
+          <img src="anelli/pircing1.JPG" alt="Anello 1" onclick="zoom('anelli/pircing1.JPG')">
+          <img src="anelli/pircing1b.JPG" alt="Anello 1c" onclick="zoom('anelli/pircing1b.JPG')">
+        </div>
+      </div> -->
+      <div class="prodotto">
+        <h3>Piercing</h3>
+        <div class="galleria">
+          <a href="anelli/pircing1.JPG" class="glightbox" data-gallery="piercing">
+            <img src="anelli/pircing1.JPG" alt="Piercing 1">
+          </a>
+          <a href="anelli/pircing1b.JPG" class="glightbox" data-gallery="piercing">
+            <img src="anelli/pircing1b.JPG" alt="Piercing 2">
+          </a>
+        </div>
+      </div>
+      
+
+    <!-- <div class="prodotto">
+      <h3>Borchie con catenella </h3>
+      <div class="galleria">
+        <img src="anelli/borchiacatena.JPG" alt="Anello 1" onclick="zoom('anelli/borchiacatena.JPG')">
+        <img src="anelli/borchiacatena1.JPG" alt="Anello 1b" onclick="zoom('anelli/borchiacatena1.JPG')">
+      </div>
+    </div> --> 
+    <div class="prodotto">
+        <h3>Piercing</h3>
+        <div class="galleria">
+          <a href="anelli/borchiacatena1.JPG" class="glightbox" data-gallery="borchiacatena">
+            <img src="anelli/borchiacatena1.JPG" alt="borchiacatena 1">
+          </a>
+          <a href="anelli/borchiacatena.JPG" class="glightbox" data-gallery="borchiacatena">
+            <img src="anelli/borchiacatena.JPG" alt="borchiacatena 2">
+          </a>
+        </div>
+      </div>
+      
+    <!-- Aggiungi altri prodotti qui -->
+  </div>
+  <!-- Zoom Modal -->
+  <!-- div id="zoom-modal" class="zoom-modal" onclick="chiudiZoom()">
+    <img id="zoom-img" src="">
+  </div-->
+
+  <!-- script>
+    function zoom(src) {
+    const modal = document.getElementById("zoom-modal");
+    const modalImg = document.getElementById("zoom-img");
+    modal.style.display = "flex";
+    modalImg.src = src;
+  }
+
+    function chiudiZoom() {
+        document.getElementById("zoom-modal").style.display = "none";
+    }
+  </script-->
+
+  <footer>
+    <p>© 2025 - Tutti i diritti riservati</p>
+  </footer>
+  <!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+
+</body>
+</html>

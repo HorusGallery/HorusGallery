@@ -46,4 +46,59 @@ body {
     border-radius: 8px;
     margin-bottom: 10px;
   }
+  .contatti-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
   
+  form {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  button {
+    margin-top: 1.5rem;
+    background-color: #000000;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #000000;
+  }
+  .hidden {
+    display: none;
+  }
+  
+  #success-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+  }

@@ -54,12 +54,17 @@
       <h2>Scrivimi via email oppure seguimi sui social!</h2>
 
       <p></p>
-
-      <ul>
-        <li> <img src="imaggini logo/Gmail.png"  style="width: 30px;">  <strong>Email:</strong> <a href="mailto:horusrings@gmail.com">horusrings@gmail.com</a></li>
-        
-        <li> <img src="imaggini logo/Instagram.png"  style="width: 30px;"> <strong>Instagram:</strong> <a href="https://www.instagram.com/_horusgallery_?igsh=cnEzeG02dm1iYnJp" target="_blank">_horusgallery_</a></li>
-      </ul>
+      <div class="contatti-bottoni">
+        <a href="#" class="contatto-btn email" onclick="copiaEmail(event)" Scrivimi via email>
+            Scrivimi via email
+        </a>
+        <p id="messaggio-copiato" style="display:none; color:green; margin-top:10px;">
+            Indirizzo email copiato negli appunti!
+          </p>
+        <img src="imaggini logo/Gmail.png" style="width: 30px;" alt="Email" class="icona-contatto">
+        <a href="https://www.instagram.com/_horusgallery_/" target="_blank" class="contatto-btn instagram">Seguimi su instagram   </a>
+            <img src="imaggini logo/Instagram.png" style="width: 30px;" alt="Instagram" class="icona-contatto">
+      </div>
     </section>
   </main>
   
@@ -96,5 +101,18 @@
     <p>&copy; 2025 Horus Gallery • Tutti i diritti riservati</p>
   </footer>
 
+  <script>
+    function copiaEmail(event) {
+      event.preventDefault();
+      const email = "horusrings@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        const msg = document.getElementById("messaggio-copiato");
+        msg.style.display = "block";
+        setTimeout(() => {
+          msg.style.display = "none";
+        }, 3000); // Nascondi il messaggio dopo 3 secondi
+      });
+    }
+  </script>
 </body>
 </html>

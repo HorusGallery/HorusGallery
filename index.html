@@ -2,14 +2,19 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Creazioni Artigianali</title>
+  <title>Creazioni Artigianali - Horus Gallery</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="imaggini-logo/LOGO1.jpg">
 </head>
 <body>
+  <body>
+    <div id="intro-logo">
+      <img src="imaggini-logo/banner1.png" alt="Logo Horus Gallery">
+    </div>
+  
   <header>
-    <img src="imaggini-logo/banner1.png"  style="width:100%;">
-    <h1>Home</h1>
+    <img src="imaggini-logo/banner1.png" style="width:100%;" alt="Banner Horus Gallery">
+    <h1>Horus Gallery</h1>
 
     <nav>
       <a href="index.html">Home</a>
@@ -19,16 +24,40 @@
   </header>
 
   <main>
-    <section>
-      <h2>Benvenuto!</h2>
-      <p>Creo gioielli con materiali riciclati, eco-pelle, cristalli e abiti unici. Ogni pezzo è fatto a mano e racconta una storia.</p>
-    <h3>
+    <!-- Sezione di presentazione principale -->
+    <section class="presentazione-home">
+      <div class="testo-presentazione">
+        <h2>Benvenuto nel mio mondo creativo!</h2>
+        <p>
+          Ogni gioiello e abito che creo nasce da un’idea, una visione e un forte rispetto per l’ambiente.
+          Utilizzo materiali riciclati, eco-pelle e cristalli per dare vita a pezzi unici, artigianali e
+          intrisi di significato. <br><br>
+          Che tu stia cercando un accessorio originale o un abito che esprima la tua personalità,
+          qui troverai qualcosa fatto con il cuore. ✨
+        </p>
+        <div class="bottoni-home">
+          <a href="prodotti.html" class="btn-sottosezione">Scopri le mie creazioni</a>
+          <a href="contatti.html" class="btn-sottosezione">Vuoi farmi una Domanda?</a>
+        </div>
+      </div>
+   
+      
+      <div class="immagine-presentazione">
+        <img src="esempio.jpg" alt="immagine di presentazione" style="max-width: 100%; border-radius: 12px;">
+      </div>
     </section>
-    <img src="esempio.jpg" alt="Una delle mie creazioni" style="width:100px;">
   </main>
 
   <footer>
-    <p> 2025 Horus Gallery • Tutti i diritti riservati</p>
+    <p>&copy; 2025 Horus Gallery • Tutti i diritti riservati</p>
   </footer>
+  <script>
+    // Nasconde l'intro dopo l'animazione
+    setTimeout(() => {
+      const intro = document.getElementById('intro-logo');
+      if (intro) intro.style.display = 'none';
+    }, 3000); // tempo corrispondente alla durata dell'animazione
+  </script>
+  
 </body>
 </html>

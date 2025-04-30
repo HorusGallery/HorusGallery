@@ -582,3 +582,81 @@ button:hover {
   opacity: 1; /* Mostrato */
   transform: translateY(0); /* Posizione finale */
 }
+.presentazione-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  background-color: #fefaf6;
+}
+
+.testo-presentazione {
+  max-width: 500px;
+  text-align: left;
+}
+
+.testo-presentazione h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.testo-presentazione p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.immagine-presentazione {
+  flex: 1;
+  max-width: 400px;
+}
+#intro-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: shrinkLogo 4s ease-in-out forwards;
+}
+
+#intro-logo img {
+  max-width: 50%;
+  animation: scaleDown 4s ease-in-out forwards;
+  border-radius: 12px;
+}
+
+@keyframes shrinkLogo {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0.6);
+  }
+}
+.bottoni-home {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spazio verticale tra i bottoni */
+  align-items: center; /* centra i bottoni orizzontalmente */
+  margin-top: 20px;
+}

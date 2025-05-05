@@ -36,7 +36,7 @@ footer {
   padding: 10px;
 }
 
-/* Box del prodotto: bordo, spaziatura, sfondo bianco, bordo stondato */
+/* Box del prodotto */
 .prodotto {
   border: 1px solid #ccc;
   padding: 15px;
@@ -48,7 +48,21 @@ footer {
   text-align: center;
 }
 
-/* Immagine del prodotto: massimo 300px, angoli arrotondati */
+.prodotto img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 3px solid #000;
+  border-radius: 10px;
+  cursor: zoom-in;
+  transition: transform 0.2s;
+}
+
+.prodotto img:hover {
+  transform: scale(1.02);
+}
+
+/* Immagine del prodotto */
 .foto-prodotto {
   width: 100%;
   max-width: 300px;
@@ -56,14 +70,13 @@ footer {
   margin-bottom: 10px;
 }
 
-/* Contenitore del form di contatto: centrato e con padding */
+/* Contenitore form di contatto */
 .contatti-container {
   display: flex;
   justify-content: center;
   padding: 2rem;
 }
 
-/* Form con sfondo bianco, ombra, bordi arrotondati */
 form {
   background: white;
   border-radius: 15px;
@@ -73,13 +86,11 @@ form {
   max-width: 500px;
 }
 
-/* Etichette sopra gli input */
 label {
   display: block;
   margin-top: 1rem;
 }
 
-/* Campi input e textarea: larghezza piena, padding e bordi arrotondati */
 input,
 textarea {
   width: 100%;
@@ -89,7 +100,6 @@ textarea {
   border-radius: 8px;
 }
 
-/* Pulsante generico: nero, bianco, bordi arrotondati */
 button {
   margin-top: 1.5rem;
   background-color: #000000;
@@ -100,17 +110,15 @@ button {
   cursor: pointer;
 }
 
-/* Hover sul pulsante: mantiene lo sfondo nero */
 button:hover {
   background-color: #000000;
 }
 
-/* Classe per nascondere elementi */
 .hidden {
   display: none;
 }
 
-/* Messaggio di successo dopo l'invio del form */
+/* Messaggio di successo */
 #success-message {
   margin-top: 1rem;
   padding: 1rem;
@@ -122,7 +130,7 @@ button:hover {
   text-align: center;
 }
 
-/* Contenitore dei bottoni contatti (email, Instagram): verticale, centrato, distanziato */
+/* Bottoni contatto */
 .contatti-bottoni {
   display: flex;
   flex-direction: column;
@@ -132,7 +140,6 @@ button:hover {
   margin-bottom: 4rem;
 }
 
-/* Stile base per ogni bottone di contatto */
 .contatto-btn {
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
@@ -146,30 +153,22 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Stile specifico per il bottone email */
-.contatto-btn.email {
-  background-color: #000000;
-}
-
-/* Stile specifico per il bottone Instagram */
+.contatto-btn.email,
 .contatto-btn.instagram {
   background-color: #000000;
 }
 
-/* Effetto al passaggio del mouse: solleva leggermente e riduce l'opacità */
 .contatto-btn:hover {
   transform: translateY(-2px);
   opacity: 0.9;
 }
 
-/* Stile del messaggio "email copiata" */
 #messaggio-copiato {
   font-weight: bold;
   font-size: 0.95rem;
   animation: fade-in-out 3s ease-in-out;
 }
 
-/* Animazione che fa apparire e poi scomparire il messaggio */
 @keyframes fade-in-out {
   0% { opacity: 0; }
   10% { opacity: 1; }
@@ -177,305 +176,17 @@ button:hover {
   100% { opacity: 0; }
 }
 
-/* Contenitore bottoni prodotti: imposta disposizione verticale e centratura */
+/* Bottoni sezioni prodotti */
 .sezioni-prodotti {
-  display: flex;
-  flex-direction: column; /* <--- bottoni uno sotto l’altro */
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-  margin-bottom: 30px; /* spazio prima del footer */
-}
-
-/* Stile dei bottoni delle categorie prodotto */
-.btn-sottosezione {
-  background-color: black;
-  color: white;
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Hover su bottoni categorie */
-.btn-sottosezione:hover {
-  background-color: #333;
-}
-
-/* Titolo pagina principale */
-.titolo-pagina {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 2rem;
-}
-
-/* Griglia per visualizzare i prodotti */
-.griglia-prodotti {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* colonne responsive */
-  gap: 30px;
-  padding: 40px;
-  justify-items: center;
-}
-
-/* Stile per immagini prodotto nella griglia */
-.prodotto img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border: 3px solid #000;
-  border-radius: 10px;
-  cursor: zoom-in;
-  transition: transform 0.2s;
-}
-
-/* Effetto zoom immagine al passaggio del mouse */
-.prodotto img:hover {
-  transform: scale(1.02);
-}
-
-/* Modal per lo zoom dell’immagine cliccata */
-.zoom-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* sfondo scuro trasparente */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* in primo piano */
-}
-
-/* Immagine visualizzata nel modal zoom */
-.zoom-modal img {
-  max-width: 80%;
-  max-height: 80%;
-  border: 4px solid white;
-  border-radius: 12px;
-}
-
-/* Contenitore galleria immagini */
-.galleria {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-/* Stile per le immagini nella galleria */
-.galleria img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border: 2px solid #000;
-  border-radius: 8px;
-  cursor: zoom-in;
-  transition: transform 0.2s;
-}
-
-/* Hover per le immagini della galleria */
-.galleria img:hover {
-  transform: scale(1.05);
-}
-/* Corpo della pagina: font base, colore di sfondo chiaro, testo nero, nessun margine o padding */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fefaf6;
-  color: #000000;
-  margin: 0;
-  padding: 0;
-}
-
-/* Header nero con testo bianco, centrato e spaziatura */
-header {
-  background-color: #000000;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Link del menu di navigazione: bianchi, senza sottolineatura e con margine */
-nav a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-}
-
-/* Sezione principale centrata e con padding */
-main {
-  padding: 20px;
-  text-align: center;
-}
-
-/* Piè di pagina: nero con testo bianco centrato */
-footer {
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-
-/* Box del prodotto: bordo, spaziatura, sfondo bianco, bordo stondato */
-.prodotto {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 600px;
-  background-color: #fff;
-  border-radius: 10px;
-  text-align: center;
-}
-
-/* Immagine del prodotto: massimo 300px, angoli arrotondati */
-.foto-prodotto {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-/* Contenitore del form di contatto: centrato e con padding */
-.contatti-container {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-}
-
-/* Form con sfondo bianco, ombra, bordi arrotondati */
-form {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  padding: 2rem;
-  width: 100%;
-  max-width: 500px;
-}
-
-/* Etichette sopra gli input */
-label {
-  display: block;
-  margin-top: 1rem;
-}
-
-/* Campi input e textarea: larghezza piena, padding e bordi arrotondati */
-input,
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-top: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-/* Pulsante generico: nero, bianco, bordi arrotondati */
-button {
-  margin-top: 1.5rem;
-  background-color: #000000;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* Hover sul pulsante: mantiene lo sfondo nero */
-button:hover {
-  background-color: #000000;
-}
-
-/* Classe per nascondere elementi */
-.hidden {
-  display: none;
-}
-
-/* Messaggio di successo dopo l'invio del form */
-#success-message {
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-  border-radius: 10px;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Contenitore dei bottoni contatti (email, Instagram): verticale, centrato, distanziato */
-.contatti-bottoni {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-}
-
-/* Stile base per ogni bottone di contatto */
-.contatto-btn {
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  width: fit-content;
-  min-width: 200px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Stile specifico per il bottone email */
-.contatto-btn.email {
-  background-color: #000000;
-}
-
-/* Stile specifico per il bottone Instagram */
-.contatto-btn.instagram {
-  background-color: #000000;
-}
-
-/* Effetto al passaggio del mouse: solleva leggermente e riduce l'opacità */
-.contatto-btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-/* Stile del messaggio "email copiata" */
-#messaggio-copiato {
-  font-weight: bold;
-  font-size: 0.95rem;
-  animation: fade-in-out 3s ease-in-out;
-}
-
-/* Animazione che fa apparire e poi scomparire il messaggio */
-@keyframes fade-in-out {
-  0% { opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-/* Contenitore bottoni prodotti: imposta disposizione verticale e centratura */
-.sezioni-prodotti {
-  display: flex;
-  flex-direction: column; /* <--- bottoni uno sotto l’altro */
-  align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-top: 30px;
+  margin: 30px 0;
   flex-wrap: wrap;
-  margin-bottom: 30px; /* spazio prima del footer */
 }
 
-/* Stile dei bottoni delle categorie prodotto */
 .btn-sottosezione {
   background-color: black;
   color: white;
@@ -487,44 +198,27 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Hover su bottoni categorie */
 .btn-sottosezione:hover {
   background-color: #333;
 }
 
-/* Titolo pagina principale */
+/* Titolo pagina */
 .titolo-pagina {
   text-align: center;
   margin-top: 40px;
   font-size: 2rem;
 }
 
-/* Griglia per visualizzare i prodotti */
+/* Griglia prodotti */
 .griglia-prodotti {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* colonne responsive */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
   padding: 40px;
   justify-items: center;
 }
 
-/* Stile per immagini prodotto nella griglia */
-.prodotto img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border: 3px solid #000;
-  border-radius: 10px;
-  cursor: zoom-in;
-  transition: transform 0.2s;
-}
-
-/* Effetto zoom immagine al passaggio del mouse */
-.prodotto img:hover {
-  transform: scale(1.02);
-}
-
-/* Modal per lo zoom dell’immagine cliccata */
+/* Modal zoom immagine */
 .zoom-modal {
   display: none;
   position: fixed;
@@ -532,13 +226,12 @@ button:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* sfondo scuro trasparente */
+  background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* in primo piano */
+  z-index: 1000;
 }
 
-/* Immagine visualizzata nel modal zoom */
 .zoom-modal img {
   max-width: 80%;
   max-height: 80%;
@@ -546,7 +239,7 @@ button:hover {
   border-radius: 12px;
 }
 
-/* Contenitore galleria immagini */
+/* Galleria immagini */
 .galleria {
   display: flex;
   gap: 10px;
@@ -555,7 +248,6 @@ button:hover {
   margin-bottom: 20px;
 }
 
-/* Stile per le immagini nella galleria */
 .galleria img {
   width: 120px;
   height: 120px;
@@ -566,22 +258,23 @@ button:hover {
   transition: transform 0.2s;
 }
 
-/* Hover per le immagini della galleria */
 .galleria img:hover {
   transform: scale(1.05);
 }
-/* Stile iniziale per elementi ancora non visibili */
+
+/* Effetto comparsa su scroll */
 .fade-in-scroll {
-  opacity: 0; /* Invisibile */
-  transform: translateY(20px); /* Spostato verso il basso */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Animazione dolce */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Quando l'elemento diventa visibile nello scroll */
 .fade-in-scroll.visible {
-  opacity: 1; /* Mostrato */
-  transform: translateY(0); /* Posizione finale */
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* Sezione presentazione in homepage */
 .presentazione-home {
   display: flex;
   flex-wrap: wrap;
@@ -611,6 +304,8 @@ button:hover {
   flex: 1;
   max-width: 400px;
 }
+
+/* Logo iniziale con animazione */
 #intro-logo {
   position: fixed;
   top: 0;
@@ -632,12 +327,8 @@ button:hover {
 }
 
 @keyframes shrinkLogo {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    transform: translateY(0);
-  }
+  0% { opacity: 1; }
+  80% { transform: translateY(0); }
   100% {
     transform: translateY(-100%);
     opacity: 0;
@@ -646,17 +337,85 @@ button:hover {
 }
 
 @keyframes scaleDown {
-  0% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(0.6);
-  }
+  0% { transform: scale(1.5); }
+  100% { transform: scale(0.6); }
 }
+
+/* Bottoni in homepage */
 .bottoni-home {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Spazio verticale tra i bottoni */
-  align-items: center; /* centra i bottoni orizzontalmente */
+  gap: 20px;
+  align-items: center;
+  margin: 40px 0;
+}
+@media (max-width: 768px) {
+    /* Qui dentro vanno gli stili per dispositivi mobili */
+  .presentazione-home {
+    flex-direction: column;
+    padding: 80px 20px 60px 20px;
+  }
+
+  .testo-presentazione {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .immagine-presentazione {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .griglia-prodotti {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    padding: 20px;
+  }
+
+  .bottoni-home {
+    width: 100%;
+    gap: 15px;
+  }
+
+  header, footer {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .contatti-container {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1rem;
+  }
+
+  .btn-sottosezione {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+.presentazione-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 50px; /* aumenta il padding verticale */
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testo-presentazione {
+  max-width: 50%;
+}
+
+.immagine-presentazione {
+  max-width: 45%;
+  height: auto;
+  object-fit: contain;
   margin-top: 20px;
 }
+
